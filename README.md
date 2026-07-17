@@ -1,6 +1,17 @@
 # Champion Copilot — Champion Impact Tracker
 
-Track your IBM Champion contributions, visualise your impact, and build nomination-ready evidence—all in your browser, with no login required.
+<table>
+  <tr>
+    <td width="35%" align="center">
+      <img src="screenshots/ibm-bob.svg" alt="IBM Bob" width="190">
+    </td>
+    <td width="65%">
+      <strong>Track your IBM Champion contributions, visualise your impact, and build nomination-ready evidence—all in your browser, with no login required.</strong>
+      <br><br>
+      Built as a practical personal companion for documenting advocacy, preserving evidence, and preparing activity summaries.
+    </td>
+  </tr>
+</table>
 
 ## Get started
 
@@ -21,25 +32,12 @@ Open the local link shown in your terminal.
 - Save ideas for future activities
 - Keep your profile and records in one personal workspace
 
-## Key features
-
-- My Impact dashboard with charts and quarterly filters
-- Add, edit, search, and delete contributions
-- Personal profile with photo, expertise, and region
-- Idea Vault with practical contribution ideas
-- Demo mode that does not affect personal records
-- No login required
-
-## Technology
-
-React · TypeScript · Vite · Recharts
-
 ## Created by
 
 [Noor Aftab](https://www.linkedin.com/in/nooraftab) · [Skilium](https://skilium.ai) · [IBM Bob](https://www.linkedin.com/company/ibmbob/)
 
 Independent community-built project. Not an official IBM product.
 
-## Screenshot
+## App preview
 
 ![Champion Copilot dashboard](screenshots/dashboard.png)
