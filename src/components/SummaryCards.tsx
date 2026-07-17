@@ -4,7 +4,6 @@ interface Props {
   contributions: Contribution[]
 }
 
-// Inline SVG icons — no external dependency needed
 function IconContributions() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -37,10 +36,20 @@ function IconClock() {
   )
 }
 
+function IconEvidence() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+    </svg>
+  )
+}
+
 export default function SummaryCards({ contributions }: Props) {
   const totalContributions = contributions.length
   const totalPeopleReached = contributions.reduce((sum, c) => sum + c.peopleReached, 0)
   const totalHours = contributions.reduce((sum, c) => sum + c.hoursContributed, 0)
+  const evidenceReady = contributions.filter(c => c.evidence && c.evidence.trim().length > 0).length
 
   return (
     <div className="cards">
@@ -64,6 +73,13 @@ export default function SummaryCards({ contributions }: Props) {
         </div>
         <div className="card-label">Hours Contributed</div>
         <div className="card-value">{totalHours}</div>
+      </div>
+      <div className="card">
+        <div className="card-icon card-icon--green">
+          <IconEvidence />
+        </div>
+        <div className="card-label">Evidence Ready</div>
+        <div className="card-value">{evidenceReady}</div>
       </div>
     </div>
   )

@@ -1,28 +1,21 @@
 interface Props {
-  hasData: boolean
-  onLoadSample: () => void
-  onClear: () => void
+  onViewDemo: () => void
+  isDemoMode: boolean
 }
 
-export default function Toolbar({ hasData, onLoadSample, onClear }: Props) {
+export default function Toolbar({ onViewDemo, isDemoMode }: Props) {
   return (
     <div className="toolbar">
       <button
         className="btn-toolbar btn-sample"
         type="button"
-        onClick={onLoadSample}
+        onClick={onViewDemo}
+        disabled={isDemoMode}
+        aria-disabled={isDemoMode}
+        title={isDemoMode ? 'Return to your tracker to exit Demo Mode first' : undefined}
       >
-        Load Sample Contributions
+        View Demo Dashboard
       </button>
-      {hasData && (
-        <button
-          className="btn-toolbar btn-clear"
-          type="button"
-          onClick={onClear}
-        >
-          Clear All Data
-        </button>
-      )}
     </div>
   )
 }
