@@ -13,6 +13,10 @@
   </tr>
 </table>
 
+## App preview
+
+![Champion Copilot dashboard](screenshots/dashboard.png)
+
 ## Get started
 
 ```bash
@@ -37,7 +41,3 @@ Open the local link shown in your terminal.
 [Noor Aftab](https://www.linkedin.com/in/nooraftab) · [Skilium](https://skilium.ai) · [IBM Bob](https://www.linkedin.com/company/ibmbob/)
 
 Independent community-built project. Not an official IBM product.
-
-## App preview
-
-![Champion Copilot dashboard](screenshots/dashboard.png)
